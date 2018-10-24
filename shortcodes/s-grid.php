@@ -201,7 +201,8 @@ function grid( $atts, $content = null ) {
 							$shortcode .='<a href="'. get_the_permalink().'">';
 								$shortcode .='<div class="wrap">';
 									if ( has_post_thumbnail() ) {
-										$shortcode .='<div class="mt-post-image" ><img alt="'. get_the_title() .'" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="'. get_the_post_thumbnail_url(get_the_ID(),'medium_large').'" width="550" height="550" /></div>';
+										//$shortcode .='<div class="mt-post-image" ><img alt="'. get_the_title() .'" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="'. get_the_post_thumbnail_url(get_the_ID(),'medium_large').'" width="550" height="550" /></div>';
+										$shortcode .='<div class="mt-post-image" ><div class="lazy mtfull" data-src="'. get_the_post_thumbnail_url(get_the_ID(),'medium_large').'"></div></div>';
 									}
 								$shortcode .='</div>';
 
