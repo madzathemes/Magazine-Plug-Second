@@ -114,13 +114,14 @@ function posts_trending( $atts, $content = null ) {
 					if($title_type=="right" and $title != ""){ $shortcode .= '<h2 class="heading heading-right"><span>'.$title.'</span></h2>'; }
 					$i=1;
 					while ( $the_query->have_posts() ) : $the_query->the_post();
+
 					if ( has_post_thumbnail() ) {
 						// Share count meta real and fake.
 						$share = get_post_meta(get_the_ID(), "magazin_share_count", true);
 						$share_real = get_post_meta(get_the_ID(), "magazin_share_count_real", true);
 						$shares = $share_real;
 						if (!empty($share)){ $shares = $share+$share_real; $shares = number_format($shares);}
-
+						$bg_blur = '<div class="mt-post-image-background" style="background-image:url('. get_the_post_thumbnail_url(get_the_ID(),'magazin_5').');"></div>'; $bg_blur = "";
 
 						// View count meta real and fake.
 						$view = get_post_meta(get_the_ID(), "magazin_view_count", true);
@@ -134,7 +135,7 @@ function posts_trending( $atts, $content = null ) {
 									$shortcode .='<span class="video-icon"></span>';
 								}
 								if ( has_post_thumbnail() ) {
-								  $shortcode .='<div class="mt-post-image" ><div class="mt-post-image-background" style="background-image:url('. get_the_post_thumbnail_url(get_the_ID(),'magazin_5').');"></div><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="'.get_the_title().'" data-src="'. get_the_post_thumbnail_url(get_the_ID(),'magazin_550').'" width="550" height="550" /></div>';
+								  $shortcode .='<div class="mt-post-image" >'.$bg_blur.'<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="'.get_the_title().'" data-src="'. get_the_post_thumbnail_url(get_the_ID(),'magazin_550').'" width="550" height="550" /></div>';
 								}
 								if ( !has_post_format( 'video' ) ) {
 									$shortcode .='<i class="ic-open open"></i>';
@@ -192,7 +193,7 @@ function posts_trending( $atts, $content = null ) {
 							$share_real = get_post_meta(get_the_ID(), "magazin_share_count_real", true);
 							$shares = $share_real;
 							if (!empty($share)){ $shares = $share+$share_real; $shares = number_format($shares);}
-
+							$bg_blur = '<div class="mt-post-image-background" style="background-image:url('. get_the_post_thumbnail_url(get_the_ID(),'magazin_5').');"></div>'; $bg_blur = "";
 
 							// View count meta real and fake.
 							$view = get_post_meta(get_the_ID(), "magazin_view_count", true);
