@@ -4,7 +4,7 @@ Plugin Name: Magazine Plug Second
 Plugin URI: https://themeforest.net
 Description: Magazin Plugins
 Author: Madars Bitenieks
-Version: 1.0.2
+Version: 1.0.3
 Author URI: https://themeforest.net
 */
 include_once ('magazin-extras.php');
