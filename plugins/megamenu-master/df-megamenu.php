@@ -583,7 +583,7 @@ if( !class_exists( 'DF_Megamenu' ) ){
 	    function image_post($post){
 	    	$thumbs='';
 				if( has_post_thumbnail( $post->ID) ){
-								$thumbs .='<div class="mt-megamenu-img poster-image mt-radius"><div class="mt-post-image"><div class="mt-post-image-background" style="background-image:url('. get_the_post_thumbnail_url($post->ID,'magazin_5').');"></div><img alt="'.$post->post_title.'" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  data-src="'. get_the_post_thumbnail_url($post->ID,'medium').'" width="550" height="550" /></div></div>';
+								$thumbs .='<div class="mt-megamenu-img poster-image mt-radius"><div class="mt-post-image"><img alt="'.$post->post_title.'" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  data-src="'. get_the_post_thumbnail_url($post->ID,'medium').'" width="550" height="550" /></div></div>';
 				}else{
 	     		$thumbs = '';
 	     	}
