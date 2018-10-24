@@ -78,9 +78,9 @@ function magazin_theme_setup() {
 
 	add_image_size( 'magazin_430', 430, 240, true);
 	add_image_size( 'magazin_585', 585, 285, true);
-	add_image_size( 'magazin_550', 550, 550, false );
-	add_image_size( 'magazin_480', 520, 520, false );
-	add_image_size( 'magazin_625', 625, 625, false );
+	add_image_size( 'magazin_550', 550, 550, true );
+	add_image_size( 'magazin_480', 520, 520, true );
+	add_image_size( 'magazin_625', 625, 625, true );
 	add_image_size( 'magazin_100', 100, 68, true );
 	add_image_size( 'magazin_1300', 1300, 370, true );
 
